@@ -4,12 +4,12 @@ const listEl = document.querySelectorAll('li.item');
 console.log(`Number of categories: ${listEl.length}`);
 
 const ulEl = document.querySelectorAll('#categories>li');
-//console.log(ulEl);
+console.log(ulEl);
 
- ulEl.forEach(el => {
+ ulEl.forEach(a => {
 
   console.log(
-    `Category: ${el.firstElementChild.textContent}, 
-    Elements: ${el.lastElementChild.children.length}`,
+    `Category: ${a.firstElementChild.textContent}, 
+    Elements: ${a.lastElementChild.children.length}`,
   );
 });
