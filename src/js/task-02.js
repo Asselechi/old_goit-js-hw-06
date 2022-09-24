@@ -13,4 +13,4 @@ newLi.textContent = ingredients;
 newLi.classList.add('item');
 
 const elemUl = document.querySelector('ul#ingredients');
-elemUl.appendChild(newLi);
+elemUl.append(newLi);
