@@ -13,7 +13,14 @@ const images = [
   },
 ];
 
-const ulEl = document.querySelector('gallery');
-//console.log(ulEl);
+const list = document.querySelector('.gallery');
+const markup = images
+  .map((image) => `<li><img class="list-item new" src=${image.url} width='200'></img></li>`)
+  .join("");
 
+list.insertAdjacentHTML("beforeend", markup);
 
+list.style.display = 'flex';
+list.style.listStyle = 'none';
+list.style.gap = '10px';
+list.style.justifyContent = 'left';
