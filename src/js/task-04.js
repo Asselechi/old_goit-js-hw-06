@@ -1,40 +1,21 @@
 
-const counterValue = document.querySelector('#value');
+let counterValue = 0;
 console.log(counterValue);
+const display = document.querySelector('#value');
 
-
-const decrement = document.querySelector('#counter').firstElementChild;
-console.log(decrement);
-const increment = document.querySelector('#counter').lastElementChild;
-console.log(increment);
+const decrement = document.querySelector('[data-action="decrement"]');
+const increment = document.querySelector('[data-action="increment"]');
 
 decrement.addEventListener('click', offClick);
 increment.addEventListener('click', onClick);
 
-function onClick (event) {
-    counterValue
-};
-function offClick (event) {
-    
+
+function offClick () {
+    counterValue--;
+    display.textContent = counterValue;
 }
-// let valueEl = Number(document.querySelector('#value').textContent);
 
-// let counterValue = document.querySelector('#value');
-
-// const dekrBtn = document.querySelector('#counter').firstElementChild;
-// const inkrBtn = document.querySelector('#counter').lastElementChild;
-
-// inkrBtn.addEventListener('click', event => {
-//   // console.log("Вешаю слушателя события на целевую кнопку");
-//   valueEl += 1;
-
-//   counterValue.innerText = valueEl;
-// });
-
-// dekrBtn.addEventListener('click', event => {
-//   // console.log("Снимаю слушателя события с целевой кнопки");
-//   valueEl -= 1;
-
-//   counterValue.innerText = valueEl;
-//   // console.log("counterValue", counterValue);
-// });
+function onClick () {
+    counterValue++;
+    display.textContent = counterValue;
+};
